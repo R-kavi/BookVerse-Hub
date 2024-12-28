@@ -3,14 +3,12 @@
 
     var browserWindow = $(window);
 
-    // :: 1.0 Preloader Active Code
     browserWindow.on('load', function () {
         $('#preloader').fadeOut('slow', function () {
             $(this).remove();
         });
     });
 
-    // :: 2.0 Newsticker Active Code
     $.simpleTicker($("#breakingNewsTicker"), {
         speed: 1250,
         delay: 3500,
@@ -18,12 +16,10 @@
         effectType: 'roll'
     });
 
-    // :: 3.0 Nav Active Code
     if ($.fn.classyNav) {
         $('#deliciousNav').classyNav();
     }
 
-    // :: 4.0 Search Active Code
     var searchwrapper = $('.search-wrapper');
     $('.search-btn').on('click', function () {
         searchwrapper.toggleClass('on');
@@ -32,7 +28,6 @@
         searchwrapper.removeClass('on');
     });
 
-    // :: 5.0 Sliders Active Code
     if ($.fn.owlCarousel) {
         var welcomeSlide = $('.hero-slides');
         var receipeSlide = $('.receipe-slider');
